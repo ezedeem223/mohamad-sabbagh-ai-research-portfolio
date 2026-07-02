@@ -1,0 +1,282 @@
+{
+  "portfolio_owner": "Mohamad Sabbagh",
+  "portfolio_theme": "Reproducible applied AI/ML systems across medical imaging, remote sensing, computer vision, and environmental ML",
+  "last_updated": "2026-05-02",
+  "portfolio_state": "finalized — all five repositories strengthened with research evidence packs",
+  "next_phase": "packaging — GitHub profile, CV, portfolio website",
+  "projects": [
+    {
+      "id": "ecg",
+      "review_order": 1,
+      "title": "Medical ECG Image-to-Signal Reconstruction Pipeline",
+      "repository_url": "https://github.com/ezedeem223/medical-ecg-image-to-signal-reconstruction-pipeline",
+      "domain": "Medical AI / Biomedical Signal Processing / Computer Vision",
+      "technical_stack": ["Python", "YOLO", "EfficientNet-B3 (SMP UNet)", "ResNet50 (SMP UNet)", "Viterbi trace extraction", "waveform calibration", "signal export"],
+      "role": "Flagship — most technically novel, highest academic depth",
+      "final_status": "Finalized with ECG Research Workbench Seed and full evidence pack",
+      "final_strengthening": [
+        "ECG runtime pipeline (YOLO → EffB3 primary → ResNet50 fallback → calibration → Viterbi → CSV export)",
+        "ECG Research Workbench Seed with parametric synthetic ECG-like benchmark (generation, scoring, optional full-pipeline modes)",
+        "Synthetic-only scoring utility (MAE, RMSE, SNR-like score)",
+        "Basic QC checks (NaN/Inf, flatline, length, amplitude, lead count, inter-lead variance)",
+        "Seed Failure Mode Atlas (5–8 conceptual failure categories)",
+        "Academic Research Brief (2–3 pages)",
+        "Pipeline Compatibility Max Pass and asset readiness inspector",
+        "Synthetic-to-runtime compatibility tooling",
+        "Optional full-pipeline smoke-test with SKIPPED_ASSETS_MISSING semantics",
+        "Honest framing throughout: no clinical validation, no diagnostic claims"
+      ],
+      "evidence_artifacts": [
+        "tools/synthetic_benchmark/ — benchmark generation and scoring",
+        "tools/quality/ — QC checks and report generation",
+        "docs/research_pack/ — academic research brief, failure atlas, synthetic protocol, evaluation protocol, reproducibility checklist",
+        "benchmark_cases/seed/ — curated synthetic image-signal pairs",
+        "configs/models.yaml — verified model policy (EffB3 primary, ResNet50 fallback)",
+        "CITATION.cff — MIT license, version 0.1.0"
+      ],
+      "safe_claims": [
+        "Multi-stage ECG image-to-signal reconstruction pipeline: YOLO detection → EfficientNet-B3 U-Net segmentation → calibration → Viterbi trace extraction → validated waveform export",
+        "Explicit config-driven model selection policy (no notebook-style auto-discovery)",
+        "Dual-anchor design: structural anchor (v57) and performance anchor (v50)",
+        "Parametric synthetic ECG-like benchmark with generation-only and scoring modes",
+        "Basic QC checks on waveform output arrays",
+        "Seed Failure Mode Atlas documenting known pipeline failure categories",
+        "Academic research brief with honest limitations and proposed research extensions",
+        "MIT license; CITATION.cff present"
+      ],
+      "unsafe_claims": [
+        "Clinical validation or diagnostic accuracy claims",
+        "Real ECG reconstruction accuracy claims (no paired real data benchmark exists)",
+        "Production medical device or clinical deployment claims",
+        "PhysioNet or external ECG dataset comparisons (not in scope)",
+        "Synthetic benchmark results presented as clinical evaluation"
+      ],
+      "cv_positioning": "Flagship. ECG image-to-signal reconstruction pipeline with parametric synthetic benchmark, QC checks, failure mode atlas, and academic research brief. Demonstrates multi-stage pipeline design, evaluation methodology thinking, and research-honest framing.",
+      "next_phase": "Packaging only — GitHub profile highlight, CV bullets, research statement. No further repo hardening unless a specific defect is found.",
+      "future_only_extensions": [
+        "Real clinical ECG benchmark (requires paired image/signal data with data-use controls)",
+        "Attention visualization over lead detection regions",
+        "Extended failure mode atlas with real pipeline runs on edge cases",
+        "Comparison against published ECG digitization methods (requires verified access)"
+      ],
+      "source_confidence": "repo surface inspected — README, CITATION.cff, configs/models.yaml verified"
+    },
+    {
+      "id": "satellite",
+      "review_order": 2,
+      "title": "Satellite Land Classification with CNN and CNN-ViT Models",
+      "repository_url": "https://github.com/ezedeem223/satellite-land-classification-cnn-vit",
+      "domain": "Remote Sensing / Computer Vision / Model Comparison",
+      "technical_stack": ["Python", "Keras", "PyTorch", "CNN", "CNN-ViT hybrid", "satellite imagery", "comparative evaluation"],
+      "role": "Second strongest academic project — comparative architecture study for remote sensing",
+      "final_status": "Finalized with Satellite Research Evidence Pack",
+      "final_strengthening": [
+        "Satellite Research Evidence Pack",
+        "Academic Research Brief",
+        "Model Comparison Brief (CNN vs CNN-ViT with preserved evaluation artifacts)",
+        "Metric Provenance Matrix",
+        "Experiment Limitation Matrix (binary scope, dataset scale, no multi-temporal, no cross-dataset)",
+        "CNN vs CNN-ViT Architecture Explainer",
+        "Dataset and Task Card",
+        "Explainability Protocol",
+        "Reproducibility Checklist",
+        "Validation tooling and tests",
+        "Neutral academic naming throughout",
+        "No state-of-the-art claims; preserved/historical metrics only where appropriate"
+      ],
+      "evidence_artifacts": [
+        "docs/research_pack/ — academic brief, model comparison, metric provenance, limitation matrix, explainer, dataset card, explainability protocol, reproducibility checklist",
+        "results/ — preserved confusion matrices, ROC curves, comparison tables from Phase 4 evaluation",
+        "CITATION.cff — MIT license, version 1.0.0, dated 2026-04-21"
+      ],
+      "safe_claims": [
+        "Binary land-use classification: class_0_non_agri vs class_1_agri from satellite imagery",
+        "CNN baseline and CNN-ViT hybrid comparative study",
+        "Dual-framework implementation: Keras and PyTorch",
+        "Preserved evaluation artifacts (confusion matrices, ROC curves, comparison tables) in results/",
+        "Experiment limitation matrix documenting binary scope, dataset constraints, no multi-temporal analysis",
+        "MIT license; CITATION.cff present (version 1.0.0)"
+      ],
+      "unsafe_claims": [
+        "State-of-the-art performance claims",
+        "Production geospatial system or real-time satellite analysis",
+        "Fabricated attention maps (attention visualization is future-only unless genuine checkpoint outputs exist)",
+        "Cross-dataset generalization claims"
+      ],
+      "cv_positioning": "Second academic pillar. CNN vs CNN-ViT comparative study for agricultural satellite land classification; dual-framework (Keras, PyTorch); metric provenance matrix; experiment limitation matrix; preserved evaluation artifacts.",
+      "next_phase": "Packaging only — GitHub highlight, CV bullets. No further repo hardening unless defect found.",
+      "future_only_extensions": [
+        "Attention visualization (only if existing checkpoint supports it without retraining)",
+        "Multi-class land-use extension",
+        "Multi-temporal analysis",
+        "Cross-dataset validation study"
+      ],
+      "source_confidence": "repo surface inspected — README, CITATION.cff, results/ directory structure verified"
+    },
+    {
+      "id": "waste",
+      "review_order": 3,
+      "title": "Waste Classification using Transfer Learning",
+      "repository_url": "https://github.com/ezedeem223/waste-classification-transfer-learning",
+      "domain": "Computer Vision / Transfer Learning / Sustainability",
+      "technical_stack": ["Python", "VGG16", "TensorFlow 2.17.0", "transfer learning", "predict.py", "bundled checkpoint"],
+      "role": "Strongest usable model-release project — bundled checkpoint with direct predict.py inference",
+      "final_status": "Finalized with Waste Model Release Evidence Pack",
+      "final_strengthening": [
+        "Waste Model Release Evidence Pack",
+        "Academic Research Brief",
+        "Model Card (with verified stored-output metrics: fine-tuned test accuracy 0.83, val 0.8854)",
+        "Model Release Card",
+        "Checkpoint and Inference Card",
+        "Metric Provenance Matrix (citing stored notebook outputs on 100 test images)",
+        "Dataset and Task Card",
+        "Sustainability Use-Case Boundary",
+        "Failure Mode Matrix",
+        "Calibration and Thresholding Protocol",
+        "Interpretability Protocol",
+        "Inference Reproducibility Guide",
+        "Reproducibility Checklist",
+        "Validation tooling and tests",
+        "CI import-path guard",
+        "No measured environmental-impact claims; no production recycling-facility claims"
+      ],
+      "evidence_artifacts": [
+        "models/vgg16_waste_classifier.keras — bundled checkpoint confirmed",
+        "predict.py — direct inference (150×150 input, Organic/Recyclable classes)",
+        "docs/research_pack/ or equivalent — model card, release card, metric provenance, limitation documentation",
+        "notebooks/main.ipynb — stored training/evaluation outputs (provenance source for metrics)"
+      ],
+      "safe_claims": [
+        "VGG16 fine-tuned binary classifier: Organic (O) vs Recyclable (R)",
+        "Fine-tuned test accuracy: 0.83 (stored notebook outputs on 100 test images — 50 Organic, 50 Recyclable)",
+        "Best validation accuracy: 0.8854 (stored notebook outputs)",
+        "Bundled checkpoint: models/vgg16_waste_classifier.keras",
+        "Direct inference via predict.py (150×150 RGB input)",
+        "Training configuration: TF 2.17.0, 800 train / 200 val / 200 test images",
+        "Sustainability use-case framing (waste sorting support, not operational deployment)"
+      ],
+      "unsafe_claims": [
+        "Production recycling facility deployment",
+        "Measured environmental impact claims",
+        "Metrics stated without stored-notebook-outputs provenance caveat",
+        "Generalization beyond training distribution without further evaluation"
+      ],
+      "cv_positioning": "Strongest direct-inference project. Bundled VGG16 checkpoint with predict.py; verified test accuracy 0.83 (stored notebook outputs); model release evidence pack; sustainability framing with explicit use-case boundaries.",
+      "next_phase": "Packaging only — GitHub highlight, CV bullets. Cleanest direct-inference project in portfolio.",
+      "future_only_extensions": [
+        "Multi-class waste extension",
+        "Domain adaptation to different waste imagery",
+        "Model compression for edge deployment",
+        "Fresh benchmark rerun with current dataset if available"
+      ],
+      "source_confidence": "repo surface inspected — README, predict.py, stored metrics from notebook outputs verified"
+    },
+    {
+      "id": "aircraft",
+      "review_order": 4,
+      "title": "Aircraft Damage Classification and Report Generation using VGG16 and BLIP",
+      "repository_url": "https://github.com/ezedeem223/aircraft_damage_vgg16_blip",
+      "domain": "Computer Vision / Vision-Language Models / Inspection Workflows",
+      "technical_stack": ["Python", "VGG16", "BLIP", "transfer learning", "captioning", "report generation"],
+      "role": "Applied CV + vision-language breadth — multimodal inspection-support workflow",
+      "final_status": "Finalized with Aircraft Research Evidence Pack",
+      "final_strengthening": [
+        "Aircraft Research Evidence Pack",
+        "Academic Research Brief",
+        "Model Card (with explicit human-review boundary and BLIP limitations)",
+        "Metric Provenance Matrix",
+        "Inspection Report Protocol",
+        "Vision-Language Limitations documentation",
+        "Failure Mode Matrix",
+        "Dataset and Task Card",
+        "Reproducibility Checklist",
+        "Validation tooling and tests",
+        "Explicit human-review boundary throughout",
+        "No aviation certification or production inspection claims"
+      ],
+      "evidence_artifacts": [
+        "scripts/run_demo.py, scripts/run_predict.py — confirmed runnable scripts",
+        "results/sample_predictions/notebook_sample_prediction.png — existing sample output",
+        "docs/research_pack/ or equivalent — model card, inspection protocol, VL limitations, failure modes"
+      ],
+      "safe_claims": [
+        "VGG16 binary damage classification + BLIP captioning in a single inspection-support pipeline",
+        "Installable Python package (aircraft_damage) with config-driven scripts",
+        "Inspection-support workflow — assists human review, does not replace inspection judgment",
+        "BLIP generates generic captions without domain fine-tuning (explicit limitation)",
+        "BLIP assets download on first use (requires internet on first run)",
+        "Archived notebooks retained for provenance; not the maintained runtime surface"
+      ],
+      "unsafe_claims": [
+        "Aviation regulatory compliance (FAA, EASA, or any regulatory body)",
+        "Certified inspection tooling or safety-critical validation",
+        "BLIP fine-tuned on aircraft imagery (not implemented)",
+        "Fabricated BLIP report examples (must be genuine model outputs)"
+      ],
+      "cv_positioning": "Applied multimodal breadth. VGG16 + BLIP inspection-support pipeline; installable Python project; research evidence pack with explicit human-review boundary and VL limitations documentation.",
+      "next_phase": "Packaging only — GitHub highlight, CV bullets.",
+      "future_only_extensions": [
+        "Domain fine-tuning of BLIP on aircraft imagery (requires labeled aviation dataset)",
+        "Formal evaluation of BLIP report quality (precision, recall of damage descriptors)",
+        "Multi-class damage severity classification"
+      ],
+      "source_confidence": "repo surface inspected — README, scripts, results/sample_predictions/ directory verified"
+    },
+    {
+      "id": "rainfall",
+      "review_order": 5,
+      "title": "Rainfall Prediction in Australia using Classical Machine Learning",
+      "repository_url": "https://github.com/ezedeem223/rainfall-prediction-classifier",
+      "domain": "Tabular ML / Environmental Prediction / Classical Machine Learning",
+      "technical_stack": ["Python", "Logistic Regression", "Random Forest", "XGBoost", "scikit-learn", "train/evaluate/predict pipeline"],
+      "role": "Tabular/environmental ML breadth — methodology range outside computer vision",
+      "final_status": "Finalized with Rainfall Research Evidence Pack",
+      "final_strengthening": [
+        "Rainfall Research Evidence Pack",
+        "Academic Research Brief",
+        "Model Card (with historical metrics and RF overfitting disclosure)",
+        "Metric Provenance Matrix (historical metrics labeled clearly)",
+        "Dataset and Task Card",
+        "Temporal Validation Protocol",
+        "Leakage and Split Risk Audit",
+        "Interpretability Protocol",
+        "Calibration and Thresholding Protocol",
+        "Error Analysis Playbook",
+        "Reproducibility Checklist",
+        "Validation tooling and tests",
+        "Explicit XGBoost provenance caveat (cells not in current tracked notebook)",
+        "No operational forecasting-service claims"
+      ],
+      "evidence_artifacts": [
+        "results/feature_importance.png — preserved from original workflow (already exists)",
+        "results/metrics.json — historical metrics (LR 0.8424, RF 0.8428, XGBoost 0.8519)",
+        "results/model_comparison.csv — labeled as original README-reported metrics",
+        "results/confusion_matrix.png, results/logistic_regression_confusion_matrix.png",
+        "CITATION.cff — confirmed present"
+      ],
+      "safe_claims": [
+        "Logistic Regression, Random Forest, and XGBoost comparison for binary rainfall prediction (RainTomorrow yes/no)",
+        "Historical test accuracies: LR 0.8424, RF 0.8428, XGBoost 0.8519 (original README-reported metrics preserved during refactor)",
+        "Random Forest train accuracy 0.9999 vs test 0.8428 — severe overfitting documented",
+        "XGBoost provenance caveat: cells not in current tracked notebook",
+        "feature_importance.png preserved from original workflow in results/",
+        "Temporal validation protocol documenting time-leakage risk in random train/test splits",
+        "Leakage and split risk audit completed"
+      ],
+      "unsafe_claims": [
+        "Operational weather forecasting service or API",
+        "Climate science novelty",
+        "Metrics stated without historical-metrics-preserved-during-refactor caveat",
+        "XGBoost metrics stated without provenance caveat"
+      ],
+      "cv_positioning": "Tabular ML breadth. Multi-model comparison (LR, RF, XGBoost); historical metric provenance matrix; temporal validation protocol; leakage audit; interpretability protocol — demonstrates methodology range outside deep learning.",
+      "next_phase": "Packaging only — GitHub highlight, CV bullets.",
+      "future_only_extensions": [
+        "Fresh training rerun with weatherAUS.csv if dataset available (replaces historical metrics)",
+        "Deep learning baseline comparison",
+        "Temporal cross-validation to address leakage risk"
+      ],
+      "source_confidence": "repo surface inspected — README, metrics.json, model_comparison.csv, results/ structure verified"
+    }
+  ]
+}

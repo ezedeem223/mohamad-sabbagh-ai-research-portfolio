@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+.venv/
+venv/
+*.egg-info/
+
+# Node / editors
+node_modules/
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Build artifacts
+dist/
+build/
+
+# Replit internals (do not ignore)
+# .replit and replit.md are intentionally tracked
+
+# Replit / local generated artifacts
+attached_assets/
+.cache/
+.local/
+node_modules/
